@@ -1,0 +1,156 @@
+.Contact {
+    background-image: url('../../assets/Nautic_Hotel/Nautic_Hotel_By_Night.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    font-family: 'Microsoft New Tai Lue';
+    color: #D9D9D9;
+}
+
+.contact-content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.contact-content.visible {
+    opacity: 1;
+}
+
+.thank-you {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 24pt;
+    cursor: pointer;
+}
+
+.thank-you-para {
+    animation: contactAnimation 2s infinite;
+}
+
+.footer {
+    background-color: #000000;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+}
+
+.footer-heading {
+    width: 20%;
+    text-align: right;
+    font-size: 20pt;
+    letter-spacing: 5px;
+}
+
+@keyframes contactAnimation {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.footer-heading p {
+    text-decoration-line: underline;
+    text-underline-offset: 0.5em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    width: 70%;
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+.grid-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.grid-items:hover {
+    transform: scale(1.05);
+}
+
+.grid-items span {
+    font-size: 16pt;
+    margin-left: 2%;
+}
+
+.grid-items a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #D9D9D9;
+}
+
+.contact-email {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 921px) {
+    .footer {
+        display: block;
+    }
+
+    .grid-container {
+        width: 90%;
+    }
+
+    .grid-items {
+        margin-top: 2%;
+    }
+
+    .grid-items span {
+        font-size: 14pt;
+    }
+
+    .thank-you {
+        font-size: 22pt;
+    }
+
+    .footer-heading {
+        text-align: right;
+        font-size: 16pt;
+        padding-top: 1px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .grid-items span {
+        font-size: 10pt;
+    }
+
+    .thank-you {
+        font-size: 18pt;
+    }
+
+    .footer-heading {
+        font-size: 12pt;
+    }
+
+    .grid-container {
+        display: block;
+        padding-bottom: 4%;
+    }
+
+    .footer-heading p {
+        margin-left: 10px;
+    }
+}

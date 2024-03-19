@@ -1,0 +1,209 @@
+.Header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: transparent;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolling {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4) 100%)
+}
+
+.company-heading {
+    margin: 0;
+    font-size: 22pt;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    font-family: 'Microsoft New Tai Lue';
+}
+
+.company-heading:hover {
+    transform: scale(1.1);
+}
+
+.lastName {
+    font-weight: 900;
+}
+
+.company-info p {
+    margin: 5px 0 0;
+    font-size: 18pt;
+    font-family: 'Microsoft New Tai Lue';
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 40px;
+    transition: scale 0.5s ease;
+}
+
+.menu ul li:hover {
+    transform: scale(1.1);
+}
+
+.menu ul li span {
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.times-container {
+    display: none;
+}
+
+.menu-container {
+    display: none;
+}
+
+.cancel-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.activated {
+    text-decoration-line: underline;
+    text-underline-offset: 0.5em;
+}
+
+select {
+    padding: 5px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+}
+
+select option {
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 921px) {
+    .Header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .activated {
+        text-decoration: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 100vh;
+        border-top: 1pxsolid #fff;
+        position: absolute;
+        top: 0px;
+        right: -110%;
+        opacity: 1;
+        transition: all 0.7s ease;
+    }
+
+    .menu.active {
+        background: rgb(0, 0, 0, 0.9);
+        right: 0px;
+        opacity: 1;
+        transition: all 0.7s ease;
+        z-index: 1;
+        text-align: center;
+        padding: 1%;
+    }
+
+    .menu ul li {
+        display: block;
+        margin: 20px 0;
+        font-size: 12pt;
+    }
+
+    .company-heading {
+        margin: 0;
+        font-size: 18pt;
+    }
+
+    .company-info h3 {
+        font-size: 16pt;
+    }
+
+    .company-info p{
+        font-size: 14pt;
+    }
+
+    .times-container {
+        display: block;
+    }
+
+    .menu-container {
+        display: block;
+    }
+
+    .cancel-icon {
+        float: right;
+    }
+
+    select {
+        font-size: 12pt;
+    }
+
+}
+
+@media screen and (max-width:426px) {
+    .company-heading {
+        margin: 0;
+        font-size: 14pt;
+    }
+
+    .company-info h3 {
+        font-size: 12pt;
+    }
+
+    .company-info p{
+        font-size: 10pt;
+    }
+
+    .menu-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .cancel-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .menu ul li {
+        font-size: 8pt;
+    }
+
+    select {
+        font-size: 8pt;
+    }
+
+}
